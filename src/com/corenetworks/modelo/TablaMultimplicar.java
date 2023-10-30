@@ -1,17 +1,31 @@
-package com.corenetworks.Presentacion;
+package com.corenetworks.modelo;
 
-public class TablasDeMultimplicar {
+public class TablaMultimplicar {
+    //1. Atrubutos:
     private int tablas;
-    private String tablasMultiplicar;
-
-    public void setTablas (int tablas){
-        this.tablas=tablas;
-    }
-   public void setTablasMultiplicar(String tablasMultiplicar){
-        this.tablasMultiplicar=tablasMultiplicar;
+    //2. Metodos:
+    public String tablasMultiplicar(){
+        String resultado = "";
+        for (int i = 1; i <=10; i++){
+            resultado += tablas + " x " + i + " = " + (tablas*i) + "\n";
+        }
+        return resultado;
    }
+   //3. Constructor:
+    public TablaMultimplicar(){
 
-    public String getTablasMultiplicar() {
-        return tablasMultiplicar;
+    }
+   public TablaMultimplicar(int tablas){
+        this.tablas=tablas;
+   }
+   //4.Setters y Getters
+
+    public int getTablas() {
+        return tablas;
+    }
+
+    public void setTablas(int tablas) {
+        this.tablas = tablas;
     }
 }
+
